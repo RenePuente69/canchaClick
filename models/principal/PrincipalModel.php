@@ -9,7 +9,7 @@
         } 
         //RECUPERAR LAS CANCHAS
         public function getCanchas(){
-            return $this->selectAll("SELECT * FROM canchas");;
+            return $this->selectAll("SELECT * FROM canchas WHERE estado = 1");;
         } 
     }
 ?>

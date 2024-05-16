@@ -29,7 +29,8 @@ class Reserva extends Controller
                     $data['mensaje'] = 'NO DISPONIBLE';
                     $data['tipo'] = 'danger';
                 }
-                
+                $data['canchas'] = $this->model->getCanchas(); 
+                $data['cancha'] = $this->model->getCancha($canchas); 
                 $this->views->getView('principal/reservas', $data);
             }
         }
