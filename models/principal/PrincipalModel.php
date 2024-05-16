@@ -11,11 +11,5 @@
         public function getCanchas(){
             return $this->selectAll("SELECT * FROM canchas");;
         } 
-
-        public function getDisponible($f_llegada, $f_salida, $canchas){
-            return $this->selectAll("SELECT * FROM reservas 
-            WHERE fecha_ingreso <= '$f_salida'
-            AND fecha_salida >= '$f_llegada' AND id_canchas = $canchas");
-        }
     }
 ?>
