@@ -14,7 +14,7 @@ class Reserva extends Controller
             if (empty($f_llegada) || empty($f_salida) || empty($canchas)) {
                 header('Location: ' . RUTA_PRINCIPAL . '?respuesta=warning');
             } else {
-                $data['reserva'] = $this->model->getDisponible($f_llegada, $f_salida, $canchas);
+                $reserva = $this->model->getDisponible($f_llegada, $f_salida, $canchas);
                 $data['title'] = 'Reservas';
                 $data['subtitle'] = 'Verificar Disponibilidad';
                 $data['disponible'] = [
@@ -22,6 +22,14 @@ class Reserva extends Controller
                     'f_salida' => $f_salida,
                     'canchas' => $canchas
                 ];
+                if (empty($reserva)) {
+                    $data['mensaje'] = 'DISPONIBLE';
+                    $data['tipo'] = 'success';
+                } else {
+                    $data['mensaje'] = 'NO DISPONIBLE';
+                    $data['tipo'] = 'danger';
+                }
+                
                 $this->views->getView('principal/reservas', $data);
             }
         }
