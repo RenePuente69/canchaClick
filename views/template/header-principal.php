@@ -100,6 +100,11 @@
                                         Contactos
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="<?php echo RUTA_PRINCIPAL . 'torneo'; ?>" class="nav-link">
+                                        Torneo
+                                    </a>
+                                </li>
                             </ul>
                             <!-- Start Other Option -->
                             <div class="others-option">

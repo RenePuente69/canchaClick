@@ -17,7 +17,7 @@ include_once 'views/template/portada.php'; ?>
                             <strong>RESPUESTA: </strong><?php echo $data['mensaje'] ?>
                         </div>
 
-                        <div id='calendar'></div>
+                        <div id='calendar' readonly></div>
                     </div>
                 </div>
             </div>

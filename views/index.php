@@ -91,7 +91,7 @@
         </div>
     </div>
     <!-- Start Check Area -->
-    <div class="check-area mb-minus-70">
+    <!--<div class="check-area mb-minus-70">
         <div class="container">
             <form class="check-form">
                 <div class="row align-items-center">
@@ -167,7 +167,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div>-->
     <!-- End Check Section -->
 
     <!-- Start Explore Area -->
