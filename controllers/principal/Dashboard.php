@@ -9,5 +9,9 @@
             $data['subtitle'] = 'Bienvenido';
             $this->views->getView('principal/clientes/index', $data);
         }   
+        public function salir() {
+            session_destroy();
+            redirect(RUTA_PRINCIPAL . 'login');
+        }
     }
 ?>

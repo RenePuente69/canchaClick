@@ -77,6 +77,10 @@ function crearSession($datos){
   $_SESSION['nombre_usuario'] = $datos['nombre'];
   $_SESSION['rol'] = $datos['rol'];
 }
+//REDIRECT
+function redirect($ruta){
+  header('Location: ' . $ruta);
+}
 //PERSONALIZAR FECHA
 function fechaPerzo($fecha)
 {
