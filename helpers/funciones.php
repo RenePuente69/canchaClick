@@ -69,6 +69,14 @@ function limitar_cadena($cadena, $limite, $sufijo)
   // Si no, entonces devuelve la cadena normal
   return $cadena;
 }
+//CREAR SESIONES
+function crearSession($datos){
+  $_SESSION['id_usuario'] = $datos['id_usuario'];
+  $_SESSION['correo_usuario'] = $datos['correo'];
+  $_SESSION['usuario'] = $datos['usuario'];
+  $_SESSION['nombre_usuario'] = $datos['nombre'];
+  $_SESSION['rol'] = $datos['rol'];
+}
 //PERSONALIZAR FECHA
 function fechaPerzo($fecha)
 {
